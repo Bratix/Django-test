@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    
+    <!-- Title -->
+    <title>Home</title>
+
+    
+    {% load static %}
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    
+
+    <!-- Core Stylesheet -->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="{% static 'css/responsive/responsive.css' %}" rel="stylesheet">
+
+    
+    
+
+</head>
+
+<body>
+    <!-- ****** Header Area Start ****** -->
+    <header class="header_area">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Area Start -->
+                <div class="col-12 section_padding_100 ">
+                    <div class="logo_area text-center">
+                        <a href="#" class="yummy-logo"> {% block title %}CRUD app{% endblock title %}</a> 
+                        
+                    </div>
+                    <div class="text-center">
+                        <a href="{% url 'crud:add' %}" class="text-center"> <h4> Create user </h4> </a>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <!-- ****** Header Area End ****** -->
+
+    {% block body %}
+    {% endblock body %}
+
+
+    <!-- Jquery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins JS -->
+    <script src="{% static 'js/others/plugins.js' %}"></script>
+    <!-- Active JS -->
+    <script src="{% static 'js/active.js' %}"></script>
+    {% block script %}
+    {% endblock script %}
+
+</body>
